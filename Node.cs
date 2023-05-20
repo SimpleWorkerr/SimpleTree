@@ -28,7 +28,7 @@ namespace SimpleTree
         /// <param name="tempNode">параметр являющийся предком, от которого нужно начинать поиск</param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public Node GetSuitNode(Node tempNode)
+        public Node GetSuitNodeAdd(Node tempNode)
         {
             if (tempNode.Data < Data && tempNode.RightChild == null)
             {
@@ -43,11 +43,11 @@ namespace SimpleTree
             {
                 if (tempNode.Data > Data && tempNode.LeftChild != null)
                 {
-                    return GetSuitNode(tempNode.LeftChild);
+                    return GetSuitNodeAdd(tempNode.LeftChild);
                 }
                 else if (tempNode.Data < Data && tempNode.RightChild != null)
                 {
-                    return GetSuitNode(tempNode.RightChild);
+                    return GetSuitNodeAdd(tempNode.RightChild);
                 }
                 else
                 {
@@ -55,5 +55,6 @@ namespace SimpleTree
                 }
             }
         }
+              
     }
 }

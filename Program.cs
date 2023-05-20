@@ -14,7 +14,11 @@
             tree.Add(7);
             tree.Add(9);
             tree.Add(6);
-            tree.Add(60);
+
+            foreach(var item in tree.Preorder())
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
