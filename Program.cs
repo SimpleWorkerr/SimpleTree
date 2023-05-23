@@ -26,6 +26,13 @@
             {
                 Console.Write(item);
             }
+
+            Console.ReadLine();
+
+            foreach (var item in tree.Inorder())
+            {
+                Console.Write(item);
+            }
         }
     }
 }

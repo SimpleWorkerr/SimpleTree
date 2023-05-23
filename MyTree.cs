@@ -94,6 +94,36 @@ namespace SimpleTree
             return result;
         }
 
+        public List<int> Inorder()
+        {
+            if (RootNode == null)
+            {
+                return new List<int>();
+            }
+
+            return Inorder(RootNode);
+        }
+        private List<int> Inorder(Node node)
+        {
+            List<int> result = new List<int>();
+
+            if (node != null)
+            {
+                if (node.LeftChild != null)
+                {
+                    result.AddRange(Inorder(node.LeftChild));
+                }
+                result.Add(node.Data);
+                if (node.RightChild != null)
+                {
+                    result.AddRange(Inorder(node.RightChild));
+                }
+                
+            }
+
+            return result;
+        }
+
     }
 
 }
