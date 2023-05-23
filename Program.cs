@@ -17,7 +17,14 @@
 
             foreach(var item in tree.Preorder())
             {
-                Console.WriteLine(item);
+                Console.Write(item);
+            }
+
+            Console.ReadLine();
+
+            foreach (var item in tree.Postorder())
+            {
+                Console.Write(item);
             }
         }
     }
